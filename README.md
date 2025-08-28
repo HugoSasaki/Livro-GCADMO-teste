@@ -1,16 +1,6 @@
 Projeto do livro do GCADMO
 
-A publicação do site não pode ser feita diretamente, pois precisa do index.html na frente
-Como toda vez que muda o livro no R, ele atualiza dentro do _book, não daria muito certo pois o index fora não atualizaria.
+A publicação do site é feita com o Active.
+O site está no ar pelo url: [https://hugosasaki.github.io/Livro-GCADMO-teste]
 
-Logo, como alternativa, foi criado uma branch chamada Site, onde será salva manualmente a pasta book toda vez que for atualizar o livro.
-Sim, é chato lembrar. Tentar automatizar na versão definitiva ou encontrar outro meio.
-
-Código:
-
-git checkout Site<br>
-cp -r _book/* .<br>
-git add .<br>
-git commit -m "Atualização manual do site"<br>
-git push origin Site<br>
-git checkout master
+O projeto está na fase de teste de modificação do site
