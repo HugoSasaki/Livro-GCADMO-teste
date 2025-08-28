@@ -1,9 +1,9 @@
 {
     "id": "18C20192",
-    "path": "C:/Users/hugo2/Documents/UFPR/GCADMO/gitbook/Biblio_GCADMO/04-Notas_para_mim_mesmo.Rmd",
+    "path": "C:/Users/hugo2/OneDrive/Área de Trabalho/Livro GCADMO/Biblio_GCADMO/04-Notas_para_mim_mesmo.Rmd",
     "project_path": "04-Notas_para_mim_mesmo.Rmd",
     "type": "r_markdown",
-    "hash": "2175887185",
+    "hash": "721460287",
     "contents": "",
     "dirty": false,
     "created": 1756124459599.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "12,15",
-        "scrollLine": "0"
+        "cursorPosition": "17,0",
+        "scrollLine": "4"
     },
     "folds": "",
-    "lastKnownWriteTime": 1756135784,
+    "lastKnownWriteTime": 1756353020,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1756135784828,
+    "last_content_update": 1756353020240,
     "read_only": false,
     "read_only_alternatives": []
 }
