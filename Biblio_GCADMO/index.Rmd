@@ -1,0 +1,24 @@
+---
+title: "Material Básico GCADMO"
+author: "Hugo Sasaki, Julyana Alvez e Luiz Garutti"
+date: "`r Sys.Date()`"
+output: pdf_document
+documentclass: book
+bibliography:
+- book.bib
+- packages.bib
+description: |
+  Um pequno livro contendo um pouco de material básico para aqueles que estão, ou querem entrar para o maravilhoso Grupo CADMO e desvendar os mistérios do mundo com o uso da Pesquisa Operacional!
+link-citations: true
+github-repo: "rstudio/bookdown-demo"
+site: bookdown::bookdown_site
+---
+
+# Sobre o Livro {-}
+
+<p class="paragrafo">Este pequeno livro feito pelos alunos do GCADMO apresenta alguns materiais e aulas com alguns conteúdos base tanto para aqueles que desejam entrar, ou que já fazem parte do grupo.</p>
+
+<p class="paragrafo">Entretanto, o campo da Pesquisa Operacional é bastante amplo, e o livro ainda está em processo de desenvolvimento, por isso pode não conter todos os materiais que deseja no presente momento, mas saiba que um dia chegaremos lá!</p>
+
+<p class="paragrafo">Considerando isso, o livro já conta com uma lista de exercícios de modelação retirado de outros livros relevantes no campo da Pesquisa Operacional que o usuário pode tentar resolver.</p>
+

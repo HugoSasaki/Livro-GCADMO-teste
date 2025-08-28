@@ -1,0 +1,32 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p.paragrafo{
+    text-indent: 2em;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+p.footnote{
+   font-size: 11px;
+   line-height: 1.2;
+   margin-left: 340px;
+   padding-bottom: 20px;
+}
+body{
+  text-align: justify;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  size-adjust: 1.5;
+}
