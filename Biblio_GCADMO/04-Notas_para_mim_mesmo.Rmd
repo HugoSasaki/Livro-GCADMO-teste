@@ -14,5 +14,5 @@ output:
 
 capítulos com exemplos resolvidos
 
-
+teste de modificação do R para o vscode
 
