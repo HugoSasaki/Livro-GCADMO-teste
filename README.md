@@ -8,9 +8,9 @@ Sim, é chato lembrar. Tentar automatizar na versão definitiva ou encontrar out
 
 Código:
 
-git checkout Site
-cp -r _book/* .
-git add .
-git commit -m "Atualização manual do site"
-git push origin Site
+git checkout Site<br>
+cp -r _book/* .<br>
+git add .<br>
+git commit -m "Atualização manual do site"<br>
+git push origin Site<br>
 git checkout master
