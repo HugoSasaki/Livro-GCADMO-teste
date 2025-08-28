@@ -1,6 +1,6 @@
 {
     "id": "70B48FBA",
-    "path": "C:/Users/hugo2/OneDrive/Área de Trabalho/Livro GCADMO/Biblio_GCADMO/_book/senhas.js",
+    "path": "C:/Users/hugo2/Documents/UFPR/GCADMO/gitbook/Biblio_GCADMO/_book/senhas.js",
     "project_path": "_book/senhas.js",
     "type": "js",
     "hash": "1110667588",
@@ -11,16 +11,14 @@
     "relative_order": 19,
     "properties": {
         "source_window_id": "",
-        "Source": "Source",
-        "cursorPosition": "0,0",
-        "scrollLine": "0"
+        "Source": "Source"
     },
     "folds": "",
-    "lastKnownWriteTime": 1756353075,
+    "lastKnownWriteTime": 1756135786,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1756353075,
+    "last_content_update": 1756135786,
     "read_only": false,
     "read_only_alternatives": []
 }
