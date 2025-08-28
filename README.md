@@ -7,12 +7,10 @@ Logo, como alternativa, foi criado uma branch chamada Site, onde será salva man
 Sim, é chato lembrar. Tentar automatizar na versão definitiva ou encontrar outro meio.
 
 Código:
-  # Mude para a branch do site (ex: gh-pages)
-git checkout gh-pages
-# Copie os arquivos da pasta de build para a raiz
-# Supondo que o GitBook gera os arquivos na pasta "_book"
+
+git checkout Site
 cp -r _book/* .
 git add .
 git commit -m "Atualização manual do site"
-git push origin gh-pa
+git push origin Site
 git checkout master
