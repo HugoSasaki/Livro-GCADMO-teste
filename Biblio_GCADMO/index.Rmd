@@ -1,6 +1,7 @@
 ---
 title: "Material Básico GCADMO"
-author: "Hugo Sasaki, Julyana Alvez e Luiz Garutti"
+author: "Grupo de Computação Aplicada a Decisão em Métodos de Otimização (GCADMO) <br>
+Writen by: Hugo Sasaki, Julyana Alves, Luiz Garutti"
 date: "`r Sys.Date()`"
 output: pdf_document
 documentclass: book

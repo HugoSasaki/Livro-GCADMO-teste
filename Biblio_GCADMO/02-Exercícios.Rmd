@@ -6,11 +6,13 @@ output:
 
 # Exercícios {.unnumbered}
 
+## 1 Modelagem{-}
+
 ------------------------------------------------------------------------
 
-## Exercício 1 {.unnumbered}
+### Exercício 1 {.unnumbered}
 
-<p class="paragrafo">**(Katta Murty 1.26)** Uma agência controla a operação de um sistema que consiste em dois reservatórios de água com uma usina hidrelétrica acoplada a cada um. O horizonte de planejamento para o sistema é de um ano, dividido em seis períodos. O reservatório 1 tem capacidade para armazenar 3500 kilo acres-pés de água e o reservatório 2 tem capacidade para 5500 kilo acres-pés. Em qualquer instante de tempo, se o reservatório estiver em sua capacidade máxima, a água adicional que entrar será descartada por meio de um vertedouro. A água descartada não produz eletricidade.</p>
+<p class="paragrafo">**(<em>Katta Murty 1.26</em>)** Uma agência controla a operação de um sistema que consiste em dois reservatórios de água com uma usina hidrelétrica acoplada a cada um. O horizonte de planejamento para o sistema é de um ano, dividido em seis períodos. O reservatório 1 tem capacidade para armazenar 3500 kilo acres-pés de água e o reservatório 2 tem capacidade para 5500 kilo acres-pés. Em qualquer instante de tempo, se o reservatório estiver em sua capacidade máxima, a água adicional que entrar será descartada por meio de um vertedouro. A água descartada não produz eletricidade.</p>
 
 <p class="paragrafo">Durante cada período, uma quantidade mínima especificada de água deve ser liberada dos reservatórios para atender às necessidades a jusante de recreação, irrigação e navegação. Entretanto, não há limite superior para a quantidade de água que pode ser liberada dos reservatórios. Qualquer água não liberada é armazenada (até a capacidade do reservatório) e pode ser utilizada para liberação em períodos subsequentes. Toda a água liberada dos reservatórios (mesmo que seja liberada para recreação e outros propósitos) produz eletricidade.</p>
 
@@ -32,9 +34,9 @@ Opere o sistema para maximizar o lucro anual total da venda de eletricidade.
 
 ------------------------------------------------------------------------
 
-## Exercício 2 {.unnumbered}
+### Exercício 2 {.unnumbered}
 
-<p class="paragrafo">**(Katta Murty 1.23)** Uma empresa europeia possui três plantas de coquerias (fornos de coque), codificadas como 1, 2 e 3. O carvão vem de quatro fontes diferentes: EUA, Ruhr, Lorena e Sarre. As plantas produzem coque, que pode ser classificado em duas categorias: coque metalúrgico, que é o mais valorizado e usado na produção de aço e os chamados “finos de coque”, que são pedaços pequenos ou pó resultante do processo; elas também produzem gás de forno de coque.</p>
+<p class="paragrafo">**(<em>Katta Murty 1.23</em>)** Uma empresa europeia possui três plantas de coquerias (fornos de coque), codificadas como 1, 2 e 3. O carvão vem de quatro fontes diferentes: EUA, Ruhr, Lorena e Sarre. As plantas produzem coque, que pode ser classificado em duas categorias: coque metalúrgico, que é o mais valorizado e usado na produção de aço e os chamados “finos de coque”, que são pedaços pequenos ou pó resultante do processo; elas também produzem gás de forno de coque.</p>
 
 <p class="paragrafo">As plantas de coquerias são operadas aquecendo-as com gás de alto-forno ou gás de coqueria. O fluxograma do processo é apresentado na figura a seguir. A produção de gás de coqueria e de coque depende do carvão utilizado.</p>
 
@@ -66,9 +68,9 @@ Opere o sistema para maximizar o lucro anual total da venda de eletricidade.
 
 ---
 
-## Exercício 3{-}
+### Exercício 3 (Modelagem Inteira){-}
 
-<p class="paragrafo">**(Caso BRF)** Uma empresa alimentícia aluga veículos para realizar as suas entregas. O setor de PCP junto ao departamento de logística faz o dimensionamento de toda carga que deve ser alocada a cada veículo, bem como a sua rota. Dessa forma, sabe-se, para cada dia de um horizonte de planejamento, quantos veículos serão necessesários. Esse dado é mostrado pela Tabela a seguir:</p>
+<p class="paragrafo">**(<em>Caso BRF</em>)** Uma empresa alimentícia aluga veículos para realizar as suas entregas. O setor de PCP junto ao departamento de logística faz o dimensionamento de toda carga que deve ser alocada a cada veículo, bem como a sua rota. Dessa forma, sabe-se, para cada dia de um horizonte de planejamento, quantos veículos serão necessesários. Esse dado é mostrado pela Tabela a seguir:</p>
 
 <br><img src="Imagens/TabelaEx_3.png" width="350"><br>
 
@@ -78,3 +80,23 @@ Opere o sistema para maximizar o lucro anual total da venda de eletricidade.
 
 a\) Determine o modelo de PI para o problema de contratação e alocação de frota da BRF.<br>
 b\) Escreva o modelo genérico (conjuntos, parâmetros, variáveis) para o problema.
+
+---
+
+### Exercício 4 (Modelagem Inteira){-}
+
+<p class="paragrafo">**(<em>Caso Ek. simplificado</em>)** Uma empresa precisa determinar as configurações da sua malha logística a longo prazo. A malha funciona da seguinte forma: existe um conjunto de fornecedores capazes de entregar diferentes produtos em diferentes de tempo. Os produtos podem ser entregues diretamente aos clientes, ou deixados em depósitos  e posteriormente enviados aos clientes (havendo assim uma consolidação de carga). Os clinetes possuem uma demanda dos diferentes produtos a cada período. Os depósitos possuem capacidades volumétricas/período e custos  fixos de abertura, se forem utilizados. Existe um custo por volume transportado associado a cada par de nós da rede (fornecedor-depósito),(fornecedor-cliente),(depósito-cliente). A malha logística pode ser simplificada pelo diagrama abaixo. </p>
+
+<br><img src="Imagens/FiguraEx_4.png" width="350"><br>
+
+Considerando a malha exemplo da Figura, um horizonte de planejamento de 4 períodos, 2 produtos, e as informações abaixo, crie o modelo de programação inteira para o caso da empresa.
+
+botar as tabelas
+
+---
+
+## 2 Introdução a Python{-}
+
+---
+
+### Exercício 1{-}
