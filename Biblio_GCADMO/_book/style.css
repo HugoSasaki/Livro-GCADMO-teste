@@ -30,3 +30,7 @@ img{
   margin-right: auto;
   size-adjust: 1.5;
 }
+summary{
+  font-size: 17px;
+  font-weight: bold;
+}
