@@ -16,3 +16,7 @@ capítulos com exemplos resolvidos
 
 teste de modificação do R para o vscode
 
+## Gabarito{-}
+
+Terminar de formatar
+Tem conteúdo que ainda não foi adicionado no gabarito

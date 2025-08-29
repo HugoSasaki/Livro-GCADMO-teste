@@ -23,7 +23,7 @@
 <meta name="author" content="Grupo de Computação Aplicada a Decisão em Métodos de Otimização (GCADMO)   Writen by: Hugo Sasaki, Julyana Alves, Luiz Garutti" />
 
 
-<meta name="date" content="2025-08-28" />
+<meta name="date" content="2025-08-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,10 +92,15 @@
 <li class="chapter" data-level="" data-path="exercícios.html"><a href="exercícios.html#exercício-1-1"><i class="fa fa-check"></i>Exercício 1</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="gabarito.html"><a href="gabarito.html"><i class="fa fa-check"></i>Gabarito</a></li>
+<li class="chapter" data-level="" data-path="gabarito.html"><a href="gabarito.html"><i class="fa fa-check"></i>Gabarito</a>
+<ul>
+<li class="chapter" data-level="" data-path="gabarito.html"><a href="gabarito.html#exercício-1-2"><i class="fa fa-check"></i>Exercício 1</a></li>
+<li class="chapter" data-level="" data-path="gabarito.html"><a href="gabarito.html#exercício-2-1"><i class="fa fa-check"></i>Exercício 2</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="notas-para-mim-mesmo-será-retirada-no-documento-final.html"><a href="notas-para-mim-mesmo-será-retirada-no-documento-final.html"><i class="fa fa-check"></i>Notas para mim mesmo (será retirada no documento final)</a>
 <ul>
 <li class="chapter" data-level="" data-path="notas-para-mim-mesmo-será-retirada-no-documento-final.html"><a href="notas-para-mim-mesmo-será-retirada-no-documento-final.html#estrutura"><i class="fa fa-check"></i>Estrutura</a></li>
+<li class="chapter" data-level="" data-path="notas-para-mim-mesmo-será-retirada-no-documento-final.html"><a href="notas-para-mim-mesmo-será-retirada-no-documento-final.html#gabarito-1"><i class="fa fa-check"></i>Gabarito</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown by GCADMO</a></li>
@@ -119,27 +124,156 @@
             <section class="normal" id="section-">
 <div id="gabarito" class="section level1 unnumbered hasAnchor">
 <h1>Gabarito<a href="gabarito.html#gabarito" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<!--
 <div id="conteudo-secreto" style="display:none;">
+-->
 <div id="exercício-1-2" class="section level2 unnumbered hasAnchor">
 <h2>Exercício 1<a href="gabarito.html#exercício-1-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><b>Objetivo Principal:</b></p>
+<p>Modelar a operação de um sistema de dois reservatórios hidrelétricos ao longo de 6 períodos (1 ano) para maximizar a receita anual proveniente da venda de eletricidade.</p>
+<p><b>Elementos-Chave do Modelo:</b></p>
+<ul>
+<li>
+Recursos Hídricos:
+</li>
+Dois reservatórios com capacidades distintas:<br>
+<ul>
+<li>
+Reservatório 1: 3.500 quilo-acre-pés (capacidade)
+</li>
+<li>
+Reservatório 2: 5.500 quilo-acre-pés (capacidade)
+</li>
+Estoques iniciais/finais fixos:
+<li>
+Início: R1 = 1.800 / R2 = 2.500 quilo-acre-pés
+</li>
+<li>
+Final: Mesmos valores devem ser mantidos.
+</li>
+</ul>
+<br>
+<li>
+Restrições Operacionais:
+</li>
+<p>Liberações mínimas por período para fins não energéticos (irrigação, navegação, etc.), fornecidas por tabela.<br>
+Entradas de água por período (dados tabelados).<br>
+Limite de armazenamento: Água excedente à capacidade é perdida (vertedouro).</p>
+<li>
+Geração de Energia:
+</li>
+<p>Cada quilo-acre-pé liberado gera energia fixa:<br>
+R1: 310 kWh<br>
+R2: 420 kWh<br></p>
+<li>
+Mercado de Venda:
+</li>
+Classe I: Compra anual com percentuais obrigatórios de entrega por período (10%, 12%, 15%, 32%, 21%, 10%).<br>
+Preço: R$ 10,00 / 1.000 kWh.<br>
+<br>
+Classe II: Compra período a período (sem restrições).<br>
+Preço: R$ 5,00 / 1.000 kWh.
+</ul>
+<p><b>Variáveis</b></p>
+<p>X<sub>ij</sub>: perda de água do reservatório i(i=1,2)no período j (j=1,2,…,6)<br>
+S<sub>ij</sub>: saída de água do reservatório i (i=1,2)no período j (j=1,2,…,6)<br>
+A<sub>ij</sub>: água disponível para produção no reservatório i (i=1,2) no período j (j=1,2,…,6)<br>
+V<sub>cj</sub>: energia vendida para cliente classe c (c=1,2) no período j (j=1,2,…,6)<br>
+P<sub>ij</sub>: energia produzida no reservatório i (i=1,2)no período j (1,2,…,6)<br>
+T<sub>j</sub>: total de energia produzida no período j (j=1,2,…,6)<br>
+CI: total de venda para o cliente de classe I<br>
+E<sub>ij</sub>: estoque do reservatório i(i=1,2)no período j (0,1,2,…,6)<br></p>
+<p><b>Função Objetivo</b></p>
+<p>Maximizar o valor obtido pela venda para clientes de classe 1 e 2 em todos os periodos<br></p>
+<span class="math display">\[\begin{equation}
+  Max \quad 10\sum_{j} V_{1j} + 5\sum_{j} V_{2j}
+\end{equation}\]</span>
+<p><b>Restrições</b></p>
+<ul>
+<li>
+Quantidade mínima liberada pelos reservatórios durante os períodos
+</li>
+<p><br></p>
+<span class="math display">\[\begin{equation}
+A_{1j} ≥ 200 \qquad \forall j \\
+A_{21} ≥ 304 \\
+A_{22} ≥ 578 \\
+A_{23} ≥ 995 \\
+A_{24} ≥ 1495 \\
+A_{25} ≥ 558 \\
+A_{26} ≥ 392
+\end{equation}\]</span>
+<li>
+Produção de energia por reservatótio
+</li>
+<li>
+Total de energia produzida por período e total vendido por clinete
+</li>
+<li>
+Limite do estoque de água dentro de cada um dos reservatórios
+</li>
+<li>
+Contagem do total de venda para cliente de classe I
+</li>
+<li>
+Saída total de água
+</li>
+<li>
+Contagem de estoque (balanço hídrico)
+</li>
+<p><br></p>
+<details>
+<summary>
+Resultados Obtidos pelo <em>gusek</em>
+</summary>
+<br>
+obj = 42071,45<br>
+<br>
+V<sub>11</sub> = 409,50<br>
+V<sub>12</sub> = 491,40<br>
+V<sub>13</sub> = 614,25<br>
+V<sub>14</sub> = 1310,4<br>
+V<sub>15</sub> = 859,95<br>
+V<sub>16</sub> = 409,50<br>
+V<sub>21</sub> = 224,29<br>
+V<sub>22</sub> = 0<br>
+V<sub>23</sub> = 0<br>
+V<sub>24</sub> = 0<br>
+V<sub>25</sub> = 0<br>
+V<sub>26</sub> = 0<br>
+P<sub>11</sub> = 243770<br>
+P<sub>12</sub> = 62000<br>
+P<sub>13</sub> = 97230<br>
+P<sub>14</sub> = 507470<br>
+P<sub>15</sub> = 62000<br>
+P<sub>16</sub> = 62000<br>
+P<sub>21</sub> = 390020<br>
+P<sub>22</sub> = 429400<br>
+P<sub>23</sub> = 517020<br>
+P<sub>24</sub> = 802930<br>
+P<sub>25</sub> = 797950<br>
+P<sub>26</sub> = 347500<br>
+</details>
+</ul>
 <hr />
 </div>
 <div id="exercício-2-1" class="section level2 unnumbered hasAnchor">
 <h2>Exercício 2<a href="gabarito.html#exercício-2-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<!--
 </div>
-</div>
-<div id="senha-div">
-<p>
-Digite a senha para acessar o gabarito:
-</p>
-<input type="password" id="senha-input" />
-<button onclick="verificarSenha()">Entrar</button>
-<br>
-<p id="mensagem">
-</p>
-</div>
-<script src="senhas.js"></script>
 
+<div id="senha-div">
+  <p>Digite a senha para acessar o gabarito:</p>
+  <input type="password" id="senha-input" />
+  <button onclick="verificarSenha()">Entrar</button>
+  <br>
+  <p id="mensagem"></p>
+</div>
+
+<script src="senhas.js"></script>
+-->
+
+</div>
 </div>
             </section>
 
@@ -201,6 +335,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

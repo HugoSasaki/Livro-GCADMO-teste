@@ -6,16 +6,132 @@ output:
 
 # Gabarito {.unnumbered}
 
+<!--
 <div id="conteudo-secreto" style="display:none;">
+-->
 
 ## Exercício 1{-}
 
+<b>Objetivo Principal:</b>
+
+Modelar a operação de um sistema de dois reservatórios hidrelétricos ao longo de 6 períodos (1 ano) para maximizar a receita anual proveniente da venda de eletricidade.
+
+<b>Elementos-Chave do Modelo:</b>
+
+<ul>
+<li>Recursos Hídricos:</li>
+
+Dois reservatórios com capacidades distintas:<br>
+<ul>
+<li>Reservatório 1: 3.500 quilo-acre-pés (capacidade)</li>
+<li>Reservatório 2: 5.500 quilo-acre-pés (capacidade)</li>
+
+Estoques iniciais/finais fixos:
+<li>Início: R1 = 1.800 / R2 = 2.500 quilo-acre-pés</li>
+<li>Final: Mesmos valores devem ser mantidos.</li>
+</ul>
+<br>
+<li>Restrições Operacionais:</li>
+
+Liberações mínimas por período para fins não energéticos (irrigação, navegação, etc.), fornecidas por tabela.<br>
+Entradas de água por período (dados tabelados).<br>
+Limite de armazenamento: Água excedente à capacidade é perdida (vertedouro).
+
+<li>Geração de Energia:</li>
+
+Cada quilo-acre-pé liberado gera energia fixa:<br>
+R1: 310 kWh<br>
+R2: 420 kWh<br>
+
+<li>Mercado de Venda:</li>
+
+Classe I: Compra anual com percentuais obrigatórios de entrega por período (10%, 12%, 15%, 32%, 21%, 10%).<br>
+Preço: R$ 10,00 / 1.000 kWh.<br>
+<br>
+Classe II: Compra período a período (sem restrições).<br>
+Preço: R$ 5,00 / 1.000 kWh.
+</ul>
+<b>Variáveis</b>
+
+X<sub>ij</sub>: perda de água do reservatório i(i=1,2)no período j (j=1,2,…,6)<br>
+S<sub>ij</sub>: saída de água do reservatório i (i=1,2)no período j (j=1,2,…,6)<br>
+A<sub>ij</sub>: água disponível para produção no reservatório i (i=1,2) no período j (j=1,2,…,6)<br>
+V<sub>cj</sub>: energia vendida para cliente classe c (c=1,2)  no período j (j=1,2,…,6)<br>
+P<sub>ij</sub>: energia produzida no reservatório i (i=1,2)no período j (1,2,…,6)<br>
+T<sub>j</sub>: total de energia produzida no período j (j=1,2,…,6)<br>
+CI: total de venda para o cliente de classe I<br>
+E<sub>ij</sub>: estoque do reservatório i(i=1,2)no período j (0,1,2,…,6)<br>
+
+<b>Função Objetivo</b>
+
+Maximizar o valor obtido pela venda para clientes de classe 1 e 2 em todos os periodos<br>
+```{=tex}
+\begin{equation}
+  Max \quad 10\sum_{j} V_{1j} + 5\sum_{j} V_{2j}
+\end{equation}
+```
+<b>Restrições</b>
+
+<ul>
+<li>Quantidade mínima liberada pelos reservatórios durante os períodos</li><br>
+
+```{=tex}
+\begin{equation}
+A_{1j} ≥ 200 \qquad \forall j \\
+A_{21} ≥ 304 \\
+A_{22} ≥ 578 \\
+A_{23} ≥ 995 \\
+A_{24} ≥ 1495 \\
+A_{25} ≥ 558 \\
+A_{26} ≥ 392 
+\end{equation}
+```
+
+<li>Produção de energia por reservatótio</li>
+<li>Total de energia produzida por período e total vendido por clinete</li>
+<li>Limite do estoque de água dentro de cada um dos reservatórios</li>
+<li>Contagem do total de venda para cliente de classe I</li>
+<li>Saída total de água</li>
+<li>Contagem de estoque (balanço hídrico)</li>
+<br>
+
+<details>
+<summary>Resultados Obtidos pelo <em>gusek</em></summary>
+<br>
+obj = 42071,45<br>
+<br>
+V<sub>11</sub> = 409,50<br>
+V<sub>12</sub> = 491,40<br>
+V<sub>13</sub> = 614,25<br>
+V<sub>14</sub> = 1310,4<br>
+V<sub>15</sub> = 859,95<br>
+V<sub>16</sub> = 409,50<br>
+V<sub>21</sub> = 224,29<br>
+V<sub>22</sub> = 0<br>
+V<sub>23</sub> = 0<br>
+V<sub>24</sub> = 0<br>
+V<sub>25</sub> = 0<br>
+V<sub>26</sub> = 0<br>
+P<sub>11</sub> = 243770<br>
+P<sub>12</sub> = 62000<br>
+P<sub>13</sub> = 97230<br>
+P<sub>14</sub> = 507470<br>
+P<sub>15</sub> = 62000<br>
+P<sub>16</sub> = 62000<br>
+P<sub>21</sub> = 390020<br>
+P<sub>22</sub> = 429400<br>
+P<sub>23</sub> = 517020<br>
+P<sub>24</sub> = 802930<br>
+P<sub>25</sub> = 797950<br>
+P<sub>26</sub> = 347500<br>
+</details>
+</ul>
 ---
 
 ## Exercício 2{-}
 
 
-
+<!--
 </div>
 
 <div id="senha-div">
@@ -27,3 +143,4 @@ output:
 </div>
 
 <script src="senhas.js"></script>
+-->
