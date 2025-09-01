@@ -276,4 +276,4 @@ Lucro: $2,37
   <p id="mensagem"></p>
 </div>
 
-<script src="senha.js"></script>
+
