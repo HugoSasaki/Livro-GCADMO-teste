@@ -99,7 +99,8 @@ A_{26} ≥ 392
 <br>
 obj = 42071,45<br>
 <br>
-V<sub>11</sub> = 409,50<br>
+<div style="display: flex; gap:120px">
+<p>V<sub>11</sub> = 409,50<br>
 V<sub>12</sub> = 491,40<br>
 V<sub>13</sub> = 614,25<br>
 V<sub>14</sub> = 1310,4<br>
@@ -110,8 +111,8 @@ V<sub>22</sub> = 0<br>
 V<sub>23</sub> = 0<br>
 V<sub>24</sub> = 0<br>
 V<sub>25</sub> = 0<br>
-V<sub>26</sub> = 0<br>
-P<sub>11</sub> = 243770<br>
+V<sub>26</sub> = 0<br></p>
+<p>P<sub>11</sub> = 243770<br>
 P<sub>12</sub> = 62000<br>
 P<sub>13</sub> = 97230<br>
 P<sub>14</sub> = 507470<br>
@@ -122,7 +123,8 @@ P<sub>22</sub> = 429400<br>
 P<sub>23</sub> = 517020<br>
 P<sub>24</sub> = 802930<br>
 P<sub>25</sub> = 797950<br>
-P<sub>26</sub> = 347500<br>
+P<sub>26</sub> = 347500<br></p>
+</div>
 </details>
 </ul>
 ---
@@ -274,4 +276,4 @@ Lucro: $2,37
   <p id="mensagem"></p>
 </div>
 
-<script src="senhas.js"></script>
+
