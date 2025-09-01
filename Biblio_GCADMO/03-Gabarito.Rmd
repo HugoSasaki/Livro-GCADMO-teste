@@ -6,20 +6,19 @@ output:
 
 # Gabarito {.unnumbered}
 
-<!--
 <div id="conteudo-secreto" style="display:none;">
--->
+---
 
 ## Exercício 1{-}
 
-<b>Objetivo Principal:</b>
+<strong>Objetivo Principal:</strong>
 
 Modelar a operação de um sistema de dois reservatórios hidrelétricos ao longo de 6 períodos (1 ano) para maximizar a receita anual proveniente da venda de eletricidade.
 
-<b>Elementos-Chave do Modelo:</b>
+<strong>Elementos-Chave do Modelo:</strong>
 
 <ul>
-<li>Recursos Hídricos:</li>
+<li><b>Recursos Hídricos:</b></li>
 
 Dois reservatórios com capacidades distintas:<br>
 <ul>
@@ -31,27 +30,27 @@ Estoques iniciais/finais fixos:
 <li>Final: Mesmos valores devem ser mantidos.</li>
 </ul>
 <br>
-<li>Restrições Operacionais:</li>
+<li><b>Restrições Operacionais:</b></li>
 
 Liberações mínimas por período para fins não energéticos (irrigação, navegação, etc.), fornecidas por tabela.<br>
 Entradas de água por período (dados tabelados).<br>
 Limite de armazenamento: Água excedente à capacidade é perdida (vertedouro).
 
-<li>Geração de Energia:</li>
+<li><b>Geração de Energia:</b></li>
 
 Cada quilo-acre-pé liberado gera energia fixa:<br>
 R1: 310 kWh<br>
 R2: 420 kWh<br>
 
-<li>Mercado de Venda:</li>
+<li><b>Mercado de Venda:</b></li>
 
 Classe I: Compra anual com percentuais obrigatórios de entrega por período (10%, 12%, 15%, 32%, 21%, 10%).<br>
 Preço: R$ 10,00 / 1.000 kWh.<br>
-<br>
-Classe II: Compra período a período (sem restrições).<br>
+<strong>Classe II:</strong> Compra período a período (sem restrições).<br>
 Preço: R$ 5,00 / 1.000 kWh.
 </ul>
-<b>Variáveis</b>
+<br>
+<strong>Variáveis</strong>
 
 X<sub>ij</sub>: perda de água do reservatório i(i=1,2)no período j (j=1,2,…,6)<br>
 S<sub>ij</sub>: saída de água do reservatório i (i=1,2)no período j (j=1,2,…,6)<br>
@@ -62,7 +61,7 @@ T<sub>j</sub>: total de energia produzida no período j (j=1,2,…,6)<br>
 CI: total de venda para o cliente de classe I<br>
 E<sub>ij</sub>: estoque do reservatório i(i=1,2)no período j (0,1,2,…,6)<br>
 
-<b>Função Objetivo</b>
+<strong>Função Objetivo</strong>
 
 Maximizar o valor obtido pela venda para clientes de classe 1 e 2 em todos os periodos<br>
 ```{=tex}
@@ -70,10 +69,10 @@ Maximizar o valor obtido pela venda para clientes de classe 1 e 2 em todos os pe
   Max \quad 10\sum_{j} V_{1j} + 5\sum_{j} V_{2j}
 \end{equation}
 ```
-<b>Restrições</b>
+<strong>Restrições</strong>
 
 <ul>
-<li>Quantidade mínima liberada pelos reservatórios durante os períodos</li><br>
+<li><b>Quantidade mínima liberada pelos reservatórios durante os períodos</b></li><br>
 
 ```{=tex}
 \begin{equation}
@@ -87,12 +86,12 @@ A_{26} ≥ 392
 \end{equation}
 ```
 
-<li>Produção de energia por reservatótio</li>
-<li>Total de energia produzida por período e total vendido por clinete</li>
-<li>Limite do estoque de água dentro de cada um dos reservatórios</li>
-<li>Contagem do total de venda para cliente de classe I</li>
-<li>Saída total de água</li>
-<li>Contagem de estoque (balanço hídrico)</li>
+<li><b>Produção de energia por reservatótio</b></li>
+<li><b>Total de energia produzida por período e total vendido por clinete</b></li>
+<li><b>Limite do estoque de água dentro de cada um dos reservatórios</b></li>
+<li><b>Contagem do total de venda para cliente de classe I</b></li>
+<li><b>Saída total de água</b></li>
+<li><b>Contagem de estoque (balanço hídrico)</b></li>
 <br>
 
 <details>
@@ -130,8 +129,141 @@ P<sub>26</sub> = 347500<br>
 
 ## Exercício 2{-}
 
+<strong>Objetivo Principal:</strong>
 
-<!--
+Produzir 1 milhão de toneladas de coque metalúrgico com o menor custo possível
+
+
+<strong>Desafios</strong>
+
+Os principais desafios são:<br>
+<ul>
+<li>Diferença na qualidade e rendimento dos carvões;</li>
+<li>Capacidade limitada das plantas;</li>
+<li>Restrições contratuais e operacionais (ex: algumas plantas não aceuitam certos carvões);</li>
+<li>Necessidade de balancear a produção de subprodutos e i uso de gás.</li>
+</ul>
+
+<strong>Variáveis</strong>
+
+<ul>
+<li>Quantidade de carvão de cada fonte em cada planta (Ex: E1, R1, S1, L1, etc.);</li>
+<li>Gases comprados e vendidos (GAF, GCC, GCV, GCU);</li>
+<li>Quantidade de coque e resíduo gerado (RDC).</li>
+</ul>
+
+<strong>Função Objetivo</strong>
+
+Minimizar os custos totais com compra de carvão, gás e maximizar receitas com venda de resíduos e gás excedente.<br>
+```{=tex}
+\begin{equation}
+  min Z = 80,39 * (E1 + E2 + E3) + 80,90 * (R1 + R2) + 83,93 * R3 + 80,14 * (S1 + S2 + S3) + 68,70 * (L1 + L2 + L3) + 8 * GAF + 11 * GCC - 98 * RDC - 11 * GCV 
+\end{equation}
+```
+<strong>Restrições</strong>
+
+<ul>
+<li><b>Capacidade das plantas</b></li><br>
+
+```{=tex}
+\begin{equation}
+E1 + R1 + S1 + L1 <= 900000;\\
+E2 + R2 + S2 + L2 <= 700000;\\
+E3 + R3 + S3 + L3 <= 300000;
+\end{equation}
+```
+
+<li><b>Restrição de uso de carvão por planta</b></li>
+
+```{=tex}
+\begin{equation}
+S1 + S2 + E3 + L3 = 0;\\
+0.7 * L1 - 0.3 * E1 - 0.3 * R1 - 0.3 * S1 <= 0;\\
+0.65 * L2 - 0.35 * E2 - 0.35 * R2 - 0.35 * S2 <= 0;\\
+0.6 * S3 - 0.4 * E3 - 0.4 * R3 - 0.4 * L3 <= 0;
+\end{equation}
+```
+
+<strong>Restrições de Produção</strong>
+
+<li><b>Geração e uso do gás</b></li>
+
+```{=tex}
+\begin{equation}
+GCP - GCU - GCV = 0;\\
+1.08 * (E1 + E2 + E3) + 1.10 * (R1 + R2 + R3) + 1.25 * (S1 + S2 + S3) + 1.45 * (L1 + L2 + L3) - GCP = 0;
+\end{equation}
+```
+
+<li><b>Produção mínima de coque metalúrgico</b></li>
+
+```{=tex}
+\begin{equation}
+0.792 * E1 + 0.728 * R1 + 0.666 * S1 + 0.612 * L1 + 0.8096 * E2 + 0.736 * R2 + 0.6808 * S2 + 0.6408 * L2 + 0.8184 * E3 + 0.744 * R3 + 0.6882 * S3 + 0.648 * L3 >= 1000000;
+\end{equation}
+```
+
+<li><b>Proporção de resíduos</b></li>
+
+```{=tex}
+\begin{equation}
+0.088 * E1 + 0.072 * R1 + 0.074 * S1 + 0.108 * L1 + 0.0704 * E2 + 0.064 * R2 + 0.0592 * S2 + 0.0792 * L2 + 0.0616 * E3 + 0.056 * R3 + 0.0518 * S3 + 0.072 * L3 - RDC = 0;
+\end{equation}
+```
+
+<strong>Equilíbrio de subprodutos</strong>
+
+<li><b>Gás necessário para processamento do carvão</b></li>
+
+```{=tex}
+\begin{equation}
+0.611 * (E1 + E2 + E3 + R1 + R2 + R3 + S1 + S2 + S3 + L1 + L2 + L3) - GCU - GCC - 0.927 * GAF = 0;
+\end{equation}
+```
+<br>
+</ul>
+<details>
+<summary>Resultados Obtidos pelo <em>gusek</em></summary>
+<br>
+E1 = 630000\\
+R1 = 0\\
+S1 = 0\\
+L1 = 270000\\
+E2 = 290825 \\
+R2 = 0\\
+E1 = 630000\\
+R1 = 0\\
+S1 = 0\\
+L1 = 270000\\
+E2 = 290825 \\
+R2 = 0\\
+GAF = 888107\\ 
+GCC = 0 \\
+GCP = 1613060 GCU = 0 \\
+GCV = 1613060 RDC = 117477\\
+
+Plantas utilizadas: 1 e 2 (planta 3 não foi usada)
+
+Fontes utilizadas: EUA e Lorena
+
+Gás produzido foi todo vendido (estratégia mais lucrativa)
+
+Resíduo total gerado: 117.477 toneladas.
+
+A otimização ignorou Ruhr e Saar, pois não eram vantajosos.
+
+Planta 3 não foi usada por ser menos eficiente ou mais cara.
+
+Estratégia favoreceu a venda do gás ao invés do uso interno, maximizando lucros.
+
+Custo do GAF/Kth = 8/0,927 = $8,63
+
+Preço de venda GC/Kth = $11
+
+Lucro: $2,37
+</details>
+---
+
 </div>
 
 <div id="senha-div">
@@ -143,4 +275,3 @@ P<sub>26</sub> = 347500<br>
 </div>
 
 <script src="senhas.js"></script>
--->
