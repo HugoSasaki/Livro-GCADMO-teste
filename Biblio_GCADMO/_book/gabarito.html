@@ -23,7 +23,7 @@
 <meta name="author" content="Grupo de Computação Aplicada a Decisão em Métodos de Otimização (GCADMO)   Writen by: Hugo Sasaki, Julyana Alves, Luiz Garutti" />
 
 
-<meta name="date" content="2025-08-29" />
+<meta name="date" content="2025-09-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,11 +92,7 @@
 <li class="chapter" data-level="" data-path="exercícios.html"><a href="exercícios.html#exercício-1-1"><i class="fa fa-check"></i>Exercício 1</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="gabarito.html"><a href="gabarito.html"><i class="fa fa-check"></i>Gabarito</a>
-<ul>
-<li class="chapter" data-level="" data-path="gabarito.html"><a href="gabarito.html#exercício-1-2"><i class="fa fa-check"></i>Exercício 1</a></li>
-<li class="chapter" data-level="" data-path="gabarito.html"><a href="gabarito.html#exercício-2-1"><i class="fa fa-check"></i>Exercício 2</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="gabarito.html"><a href="gabarito.html"><i class="fa fa-check"></i>Gabarito</a></li>
 <li class="chapter" data-level="" data-path="notas-para-mim-mesmo-será-retirada-no-documento-final.html"><a href="notas-para-mim-mesmo-será-retirada-no-documento-final.html"><i class="fa fa-check"></i>Notas para mim mesmo (será retirada no documento final)</a>
 <ul>
 <li class="chapter" data-level="" data-path="notas-para-mim-mesmo-será-retirada-no-documento-final.html"><a href="notas-para-mim-mesmo-será-retirada-no-documento-final.html#estrutura"><i class="fa fa-check"></i>Estrutura</a></li>
@@ -124,17 +120,16 @@
             <section class="normal" id="section-">
 <div id="gabarito" class="section level1 unnumbered hasAnchor">
 <h1>Gabarito<a href="gabarito.html#gabarito" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<!--
 <div id="conteudo-secreto" style="display:none;">
--->
+<hr />
 <div id="exercício-1-2" class="section level2 unnumbered hasAnchor">
 <h2>Exercício 1<a href="gabarito.html#exercício-1-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><b>Objetivo Principal:</b></p>
+<p><strong>Objetivo Principal:</strong></p>
 <p>Modelar a operação de um sistema de dois reservatórios hidrelétricos ao longo de 6 períodos (1 ano) para maximizar a receita anual proveniente da venda de eletricidade.</p>
-<p><b>Elementos-Chave do Modelo:</b></p>
+<p><strong>Elementos-Chave do Modelo:</strong></p>
 <ul>
 <li>
-Recursos Hídricos:
+<b>Recursos Hídricos:</b>
 </li>
 Dois reservatórios com capacidades distintas:<br>
 <ul>
@@ -154,27 +149,27 @@ Final: Mesmos valores devem ser mantidos.
 </ul>
 <br>
 <li>
-Restrições Operacionais:
+<b>Restrições Operacionais:</b>
 </li>
 <p>Liberações mínimas por período para fins não energéticos (irrigação, navegação, etc.), fornecidas por tabela.<br>
 Entradas de água por período (dados tabelados).<br>
 Limite de armazenamento: Água excedente à capacidade é perdida (vertedouro).</p>
 <li>
-Geração de Energia:
+<b>Geração de Energia:</b>
 </li>
 <p>Cada quilo-acre-pé liberado gera energia fixa:<br>
 R1: 310 kWh<br>
 R2: 420 kWh<br></p>
 <li>
-Mercado de Venda:
+<b>Mercado de Venda:</b>
 </li>
 Classe I: Compra anual com percentuais obrigatórios de entrega por período (10%, 12%, 15%, 32%, 21%, 10%).<br>
 Preço: R$ 10,00 / 1.000 kWh.<br>
-<br>
-Classe II: Compra período a período (sem restrições).<br>
+<strong>Classe II:</strong> Compra período a período (sem restrições).<br>
 Preço: R$ 5,00 / 1.000 kWh.
 </ul>
-<p><b>Variáveis</b></p>
+<p><br>
+<strong>Variáveis</strong></p>
 <p>X<sub>ij</sub>: perda de água do reservatório i(i=1,2)no período j (j=1,2,…,6)<br>
 S<sub>ij</sub>: saída de água do reservatório i (i=1,2)no período j (j=1,2,…,6)<br>
 A<sub>ij</sub>: água disponível para produção no reservatório i (i=1,2) no período j (j=1,2,…,6)<br>
@@ -183,15 +178,15 @@ P<sub>ij</sub>: energia produzida no reservatório i (i=1,2)no período j (1,2,�
 T<sub>j</sub>: total de energia produzida no período j (j=1,2,…,6)<br>
 CI: total de venda para o cliente de classe I<br>
 E<sub>ij</sub>: estoque do reservatório i(i=1,2)no período j (0,1,2,…,6)<br></p>
-<p><b>Função Objetivo</b></p>
+<p><strong>Função Objetivo</strong></p>
 <p>Maximizar o valor obtido pela venda para clientes de classe 1 e 2 em todos os periodos<br></p>
 <span class="math display">\[\begin{equation}
   Max \quad 10\sum_{j} V_{1j} + 5\sum_{j} V_{2j}
 \end{equation}\]</span>
-<p><b>Restrições</b></p>
+<p><strong>Restrições</strong></p>
 <ul>
 <li>
-Quantidade mínima liberada pelos reservatórios durante os períodos
+<b>Quantidade mínima liberada pelos reservatórios durante os períodos</b>
 </li>
 <p><br></p>
 <span class="math display">\[\begin{equation}
@@ -204,22 +199,22 @@ A_{25} ≥ 558 \\
 A_{26} ≥ 392
 \end{equation}\]</span>
 <li>
-Produção de energia por reservatótio
+<b>Produção de energia por reservatótio</b>
 </li>
 <li>
-Total de energia produzida por período e total vendido por clinete
+<b>Total de energia produzida por período e total vendido por clinete</b>
 </li>
 <li>
-Limite do estoque de água dentro de cada um dos reservatórios
+<b>Limite do estoque de água dentro de cada um dos reservatórios</b>
 </li>
 <li>
-Contagem do total de venda para cliente de classe I
+<b>Contagem do total de venda para cliente de classe I</b>
 </li>
 <li>
-Saída total de água
+<b>Saída total de água</b>
 </li>
 <li>
-Contagem de estoque (balanço hídrico)
+<b>Contagem de estoque (balanço hídrico)</b>
 </li>
 <p><br></p>
 <details>
@@ -259,21 +254,137 @@ P<sub>26</sub> = 347500<br>
 </div>
 <div id="exercício-2-1" class="section level2 unnumbered hasAnchor">
 <h2>Exercício 2<a href="gabarito.html#exercício-2-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<!--
+<p><strong>Objetivo Principal:</strong></p>
+<p>Produzir 1 milhão de toneladas de coque metalúrgico com o menor custo possível</p>
+<p><strong>Desafios</strong></p>
+Os principais desafios são:<br>
+<ul>
+<li>
+Diferença na qualidade e rendimento dos carvões;
+</li>
+<li>
+Capacidade limitada das plantas;
+</li>
+<li>
+Restrições contratuais e operacionais (ex: algumas plantas não aceuitam certos carvões);
+</li>
+<li>
+Necessidade de balancear a produção de subprodutos e i uso de gás.
+</li>
+</ul>
+<p><strong>Variáveis</strong></p>
+<ul>
+<li>
+Quantidade de carvão de cada fonte em cada planta (Ex: E1, R1, S1, L1, etc.);
+</li>
+<li>
+Gases comprados e vendidos (GAF, GCC, GCV, GCU);
+</li>
+<li>
+Quantidade de coque e resíduo gerado (RDC).
+</li>
+</ul>
+<p><strong>Função Objetivo</strong></p>
+<p>Minimizar os custos totais com compra de carvão, gás e maximizar receitas com venda de resíduos e gás excedente.<br></p>
+<span class="math display">\[\begin{equation}
+  min Z = 80,39 * (E1 + E2 + E3) + 80,90 * (R1 + R2) + 83,93 * R3 + 80,14 * (S1 + S2 + S3) + 68,70 * (L1 + L2 + L3) + 8 * GAF + 11 * GCC - 98 * RDC - 11 * GCV
+\end{equation}\]</span>
+<p><strong>Restrições</strong></p>
+<ul>
+<li>
+<b>Capacidade das plantas</b>
+</li>
+<p><br></p>
+<span class="math display">\[\begin{equation}
+E1 + R1 + S1 + L1 &lt;= 900000;\\
+E2 + R2 + S2 + L2 &lt;= 700000;\\
+E3 + R3 + S3 + L3 &lt;= 300000;
+\end{equation}\]</span>
+<li>
+<b>Restrição de uso de carvão por planta</b>
+</li>
+<span class="math display">\[\begin{equation}
+S1 + S2 + E3 + L3 = 0;\\
+0.7 * L1 - 0.3 * E1 - 0.3 * R1 - 0.3 * S1 &lt;= 0;\\
+0.65 * L2 - 0.35 * E2 - 0.35 * R2 - 0.35 * S2 &lt;= 0;\\
+0.6 * S3 - 0.4 * E3 - 0.4 * R3 - 0.4 * L3 &lt;= 0;
+\end{equation}\]</span>
+<p><strong>Restrições de Produção</strong></p>
+<li>
+<b>Geração e uso do gás</b>
+</li>
+<span class="math display">\[\begin{equation}
+GCP - GCU - GCV = 0;\\
+1.08 * (E1 + E2 + E3) + 1.10 * (R1 + R2 + R3) + 1.25 * (S1 + S2 + S3) + 1.45 * (L1 + L2 + L3) - GCP = 0;
+\end{equation}\]</span>
+<li>
+<b>Produção mínima de coque metalúrgico</b>
+</li>
+<span class="math display">\[\begin{equation}
+0.792 * E1 + 0.728 * R1 + 0.666 * S1 + 0.612 * L1 + 0.8096 * E2 + 0.736 * R2 + 0.6808 * S2 + 0.6408 * L2 + 0.8184 * E3 + 0.744 * R3 + 0.6882 * S3 + 0.648 * L3 &gt;= 1000000;
+\end{equation}\]</span>
+<li>
+<b>Proporção de resíduos</b>
+</li>
+<span class="math display">\[\begin{equation}
+0.088 * E1 + 0.072 * R1 + 0.074 * S1 + 0.108 * L1 + 0.0704 * E2 + 0.064 * R2 + 0.0592 * S2 + 0.0792 * L2 + 0.0616 * E3 + 0.056 * R3 + 0.0518 * S3 + 0.072 * L3 - RDC = 0;
+\end{equation}\]</span>
+<p><strong>Equilíbrio de subprodutos</strong></p>
+<li>
+<b>Gás necessário para processamento do carvão</b>
+</li>
+<span class="math display">\[\begin{equation}
+0.611 * (E1 + E2 + E3 + R1 + R2 + R3 + S1 + S2 + S3 + L1 + L2 + L3) - GCU - GCC - 0.927 * GAF = 0;
+\end{equation}\]</span>
+<br>
+</ul>
+<details>
+<summary>
+Resultados Obtidos pelo <em>gusek</em>
+</summary>
+<p><br>
+E1 = 630000\
+R1 = 0\
+S1 = 0\
+L1 = 270000\
+E2 = 290825 \
+R2 = 0\
+E1 = 630000\
+R1 = 0\
+S1 = 0\
+L1 = 270000\
+E2 = 290825 \
+R2 = 0\
+GAF = 888107\
+GCC = 0 \
+GCP = 1613060 GCU = 0 \
+GCV = 1613060 RDC = 117477\</p>
+<p>Plantas utilizadas: 1 e 2 (planta 3 não foi usada)</p>
+<p>Fontes utilizadas: EUA e Lorena</p>
+<p>Gás produzido foi todo vendido (estratégia mais lucrativa)</p>
+<p>Resíduo total gerado: 117.477 toneladas.</p>
+<p>A otimização ignorou Ruhr e Saar, pois não eram vantajosos.</p>
+<p>Planta 3 não foi usada por ser menos eficiente ou mais cara.</p>
+<p>Estratégia favoreceu a venda do gás ao invés do uso interno, maximizando lucros.</p>
+<p>Custo do GAF/Kth = 8/0,927 = $8,63</p>
+<p>Preço de venda GC/Kth = $11</p>
+Lucro: $2,37
+</details>
+<hr />
 </div>
-
+</div>
 <div id="senha-div">
-  <p>Digite a senha para acessar o gabarito:</p>
-  <input type="password" id="senha-input" />
-  <button onclick="verificarSenha()">Entrar</button>
-  <br>
-  <p id="mensagem"></p>
+<p>
+Digite a senha para acessar o gabarito:
+</p>
+<input type="password" id="senha-input" />
+<button onclick="verificarSenha()">Entrar</button>
+<br>
+<p id="mensagem">
+</p>
 </div>
-
 <script src="senhas.js"></script>
--->
 
-</div>
 </div>
             </section>
 

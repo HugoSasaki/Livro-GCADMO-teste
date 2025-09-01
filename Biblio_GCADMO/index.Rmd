@@ -21,5 +21,4 @@ site: bookdown::bookdown_site
 
 <p class="paragrafo">Entretanto, o campo da Pesquisa Operacional é bastante amplo, e o livro ainda está em processo de desenvolvimento, por isso pode não conter todos os materiais que deseja no presente momento, mas saiba que um dia chegaremos lá!</p>
 
-<p class="paragrafo">Considerando isso, o livro já conta com uma lista de exercícios de modelação retirado de outros livros relevantes no campo da Pesquisa Operacional que o usuário pode tentar resolver.</p>
-
+<p class="paragrafo">Considerando isso, o livro já conta com uma lista de exercícios de modelação retirado de outros livros relevantes no campo da Pesquisa Operacional que o usuário pode tentar resolver.</p> 
