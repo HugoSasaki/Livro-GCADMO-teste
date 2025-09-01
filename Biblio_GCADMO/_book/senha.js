@@ -10,12 +10,15 @@
         "Senha incorreta, resolva o exercício na marra.";
     }
   }
+  document.addEventListener("DOMContentLoaded", function () {
+    const input = document.getElementById("senha-input");
 
-  // 🔹 Atalho para Enter no campo de senha
-  document.getElementById("senha-input")
-    .addEventListener("keypress", function(event) {
-      if (event.key === "Enter") {
-        event.preventDefault(); 
-        verificarSenha(); // chama a função existente
-      }
-    })
+    if (input) {
+      input.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          verificarSenha();
+        }
+      });
+    }
+  });
