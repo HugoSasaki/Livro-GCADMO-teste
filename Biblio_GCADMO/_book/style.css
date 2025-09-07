@@ -2,7 +2,7 @@ p.caption {
   color: #777;
   margin-top: 10px;
 }
-p.paragrafo{
+body p{
     text-indent: 2em;
 }
 p code {
@@ -15,11 +15,13 @@ pre {
 pre code {
   white-space: inherit;
 }
+
 p.footnote{
    font-size: 11px;
    line-height: 1.2;
    margin-left: 340px;
    padding-bottom: 20px;
+   text-indent: 0;
 }
 body{
   text-align: justify;
