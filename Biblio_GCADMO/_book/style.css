@@ -2,6 +2,10 @@ p.caption {
   color: #777;
   margin-top: 10px;
 }
+body{
+  text-align: justify;
+  text-indent: 0;
+}
 #exercícios p{
     text-indent: 2em;
 }
@@ -25,9 +29,6 @@ pre code {
 }
 #exercícios p.small-text{
   text-indent: 0;
-}
-body{
-  text-align: justify;
 }
 img{
   display: block;
